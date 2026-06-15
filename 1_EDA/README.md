@@ -34,7 +34,7 @@ The third question is the interesting one. A skill that pays a fortune across th
 
 This analysis runs against a **data warehouse** built on a star schema:
 
-![Data Warehouse Schema](../Images\1_2_Data_Warehouse.png)
+![Data Warehouse Schema](../Images/1_2_Data_Warehouse.png)
 
 - **Fact Table:** `job_postings_fact` — central table with job posting details (titles, locations, salaries, dates)
 - **Dimension Tables:**
@@ -87,7 +87,7 @@ The natural-log term is the key design choice. It keeps demand in the equation w
 
 ## 📊 Headline Result: the top tier is stable across both markets
 
-![Optimal score: Global vs Germany](../Images\optimal_score_comparison.png)
+![Optimal score: Global vs Germany](../Images/optimal_score_comparison.png)
 
 **SQL, Python, and Tableau take the top three spots in both the global and German rankings.** That the order survives an independent cut of the data is the strongest single takeaway: these three are the safe foundation for a data analyst regardless of market.
 
@@ -105,7 +105,7 @@ The German scores are far smaller — but that's a volume signal, not a quality 
 
 ## ⚠️ The catch: German sample size
 
-![Salaried-posting volume, log scale](../Images\demand_volume_gap.png)
+![Salaried-posting volume, log scale](../Images/demand_volume_gap.png)
 
 The German scores are lower because the `ln(demand_count)` term is smaller, and that term is smaller because there are dramatically fewer salaried German postings. SQL is backed by roughly **8,900 salaried postings globally but only ~40 in Germany** — over two orders of magnitude apart (note the log scale).
 
@@ -115,7 +115,7 @@ This is why the German query returned **nothing** under the original `HAVING COU
 
 ## 💶 Where Germany differs: a small salary premium on core skills
 
-![Median salary on core skills](../Images\core_salary_comparison.png)
+![Median salary on core skills](../Images/core_salary_comparison.png)
 
 On the skills that *do* have enough German data to compare, median salary runs consistently a little higher than the global baseline — modest, but pointing the same direction across nearly every core skill:
 
